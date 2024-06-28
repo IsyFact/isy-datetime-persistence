@@ -4,8 +4,7 @@
 
 # isy-persistence
 
-Diese Bibliothek stellt Funktionen Kommunikation mit Datenquellen zur Verfügung.
-
+Diese Bibliothek stellt Funktionen zur Kommunikation mit Datenquellen zur Verfügung.
 
 ## IsyFact
 
@@ -14,8 +13,6 @@ isy-persistence ist ein Teil der IsyFact-Standards, eines Open-Source-Projekts f
 ## Features
 
 isy-persistence stellt Wrapper für DataSources bereit. Weiterhin werden Funktionen zur Persistierung von Objekten aus isy-datetime zur Verfügung gestellt.
-
-
 
 ### Mithelfen
 Wir freuen uns über Beiträge zur Weiterentwicklung von isy-persistence.
