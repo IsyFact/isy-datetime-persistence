@@ -3,9 +3,9 @@
 [![Dependency](https://img.shields.io/badge/Uses-Hibernate-blue)](https://hibernate.org/)
 [![Dependency](https://img.shields.io/badge/Uses-Spring-blue)](https://hibernate.org/)
 [![Dependency](https://img.shields.io/badge/Uses-Spring_Boot-blue)](https://hibernate.org/)
-![Dependency](https://img.shields.io/badge/Isyfact-isy--datetime-yellow)
-![Dependency](https://img.shields.io/badge/Isyfact-isy--exceptions--core-yellow)
-![Dependency](https://img.shields.io/badge/Isyfact-isy--logging-yellow)
+![Dependency](https://img.shields.io/badge/Isyfact-IsyDatetime_3.0.1-yellow)
+![Dependency](https://img.shields.io/badge/Isyfact-IsyExceptions_3.0.1-yellow)
+![Dependency](https://img.shields.io/badge/Isyfact-IsyLogging_3.0.1-yellow)
 [![Test](https://img.shields.io/badge/Build-maven-dark_green)](https://maven.apache.org/)
 
 
