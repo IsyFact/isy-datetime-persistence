@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-orange)](https://opensource.org/licenses/Apache-2.0)
-![GitHub Sprache](https://img.shields.io/badge/Language-Java_21-blue)
+![GitHub Sprache](https://img.shields.io/badge/Language-Java_21-orange)
 [![Dependency](https://img.shields.io/badge/Uses-Hibernate-blue)](https://hibernate.org/)
 [![Dependency](https://img.shields.io/badge/Uses-Spring-blue)](https://hibernate.org/)
 [![Dependency](https://img.shields.io/badge/Uses-Spring_Boot-blue)](https://hibernate.org/)
