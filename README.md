@@ -1,5 +1,17 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-orange)](https://opensource.org/licenses/Apache-2.0)
-![GitHub Sprache](https://img.shields.io/badge/Language-Java_21-orange)
+![GitHub Sprache](https://img.shields.io/badge/Language-Java_21-blue)
+[![Dependency](https://img.shields.io/badge/Persistence-Hibernate-blue)](https://hibernate.org/)
+[![Dependency](https://img.shields.io/badge/Persistence-Spring-blue)](https://hibernate.org/)
+[![Dependency](https://img.shields.io/badge/Persistence-Spring_Boot-blue)](https://hibernate.org/)
+[![Dependency](https://img.shields.io/badge/Isyfact-isy--datetime-yellow)](https://jacoco.org/)
+[![Dependency](https://img.shields.io/badge/Isyfact-isy--exceptions--core-yellow)](https://jacoco.org/)
+[![Dependency](https://img.shields.io/badge/Isyfact-isy--logging-yellow)](https://jacoco.org/)
+![Version](https://img.shields.io/badge/Version-4.0.0-red)
+[![Test](https://img.shields.io/badge/Build-maven-dark_green)](https://maven.apache.org/)
+[![Test](https://img.shields.io/badge/Test-JUnit-green)](https://junit.org/)
+[![Test](https://img.shields.io/badge/Test-Mockito-green)](https://mockito.org/)
+[![Test](https://img.shields.io/badge/Test-DbUnit-green)](https://dbunit.org/)
+[![Test](https://img.shields.io/badge/Test-Jacoco-green)](https://jacoco.org/)
 
 
 # isy-persistence
