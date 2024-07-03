@@ -1,12 +1,10 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-orange)](https://opensource.org/licenses/Apache-2.0)
 ![GitHub Sprache](https://img.shields.io/badge/Language-Java_21-orange)
-[![Dependency](https://img.shields.io/badge/Uses-Hibernate-blue)](https://hibernate.org/)
-[![Dependency](https://img.shields.io/badge/Uses-Spring-blue)](https://hibernate.org/)
-[![Dependency](https://img.shields.io/badge/Uses-Spring_Boot-blue)](https://hibernate.org/)
-![Dependency](https://img.shields.io/badge/Isyfact-IsyDatetime_3.0.1-yellow)
-![Dependency](https://img.shields.io/badge/Isyfact-IsyExceptions_3.0.1-yellow)
-![Dependency](https://img.shields.io/badge/Isyfact-IsyLogging_3.0.1-yellow)
-[![Test](https://img.shields.io/badge/Build-maven-dark_green)](https://maven.apache.org/)
+![Dependency](https://img.shields.io/badge/Isyfact-IsyDatetime_3.0.1-blue)
+![Dependency](https://img.shields.io/badge/Isyfact-IsyExceptions_3.0.1-blue)
+![Dependency](https://img.shields.io/badge/Isyfact-IsyLogging_3.0.1-blue)
+[![Dependency](https://img.shields.io/badge/Uses-Hibernate-yellow)](https://hibernate.org/)
+[![Dependency](https://img.shields.io/badge/Uses-Spring-yellow)](https://hibernate.org/)
 
 
 # isy-persistence
