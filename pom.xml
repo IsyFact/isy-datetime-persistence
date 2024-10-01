@@ -30,7 +30,7 @@
         <jakarta.persistence.version>3.1.0</jakarta.persistence.version>
         <hibernate.core.version>6.5.2.Final</hibernate.core.version>
         <hibernate.validator.version>7.0.5.Final</hibernate.validator.version>
-        <h2.version>2.2.224</h2.version>
+        <h2.version>2.3.232</h2.version>
 
         <isy-datetime.version>3.0.1</isy-datetime.version>
         <isy-logging.version>3.0.1</isy-logging.version>
