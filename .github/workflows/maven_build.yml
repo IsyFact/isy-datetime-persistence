@@ -1,0 +1,19 @@
+# Maven Build: Compile, Test, SonarCloudScan
+name: Maven Build
+
+on:
+  push:
+    branches:
+      - develop
+      - release/*
+  pull_request:
+    branches:
+      - develop
+  workflow_dispatch:
+jobs:
+  MavenBuild:
+    uses: IsyFact/isy-github-actions-templates/.github/workflows/maven_build_template.yml@v1.5.0
+    with:
+      jdk-version: 21
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
