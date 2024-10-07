@@ -1,4 +1,4 @@
-package de.bund.bva.isyfact.persistence.datetime.attributeconverter.test;
+package de.bund.bva.isyfact.datetime.persistence.attributeconverter;
 
 import java.time.Period;
 
