@@ -1,3 +1,5 @@
+# 4.0.0 
+- `IFS-4128`: Anpassen der minimalistischen POM und Entfernen der Abhängigkeiten
 # 3.0.0
 - `IFS-1354`: Autokonfiguration mit initialisierbarer Datenbank
     * Für die Konfiguration der DataSource wurde zu den DataSourceProperties von Spring Boot gewechselt. Hierdurch haben sich die Namen der Konfigurationsschlüssel geändert und müssen angepasst werden.
