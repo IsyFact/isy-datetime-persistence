@@ -4,9 +4,16 @@ name: Maven Build
 on:
   push:
     branches:
+      - main
       - develop
       - release/**
       - hotfix/**
+      - feature/**
+      - bugfix/**
+    paths:
+      - .github/**
+      - src/**
+      - pom.xml
   pull_request:
     branches:
       - develop
