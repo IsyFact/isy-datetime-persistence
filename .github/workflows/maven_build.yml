@@ -4,13 +4,23 @@ name: Maven Build
 on:
   push:
     branches:
+      - main
       - develop
-      - release/*
+      - release/**
+      - hotfix/**
+      - feature/**
+      - bugfix/**
   pull_request:
     branches:
       - develop
   workflow_dispatch:
 jobs:
+  Version:
+    uses: IsyFact/isy-github-actions-templates/.github/workflows/next_version.yml@v1.5.0
+    with:
+      next-version: 4.0.0
+      calculate-rc: ${{ startsWith(github.ref, 'refs/heads/release/') }}
+
   MavenBuild:
     uses: IsyFact/isy-github-actions-templates/.github/workflows/maven_build_template.yml@v1.5.0
     with:
