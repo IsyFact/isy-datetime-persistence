@@ -1,4 +1,4 @@
-package de.bund.bva.isyfact.persistence.datetime;
+package de.bund.bva.isyfact.datetime.persistence;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

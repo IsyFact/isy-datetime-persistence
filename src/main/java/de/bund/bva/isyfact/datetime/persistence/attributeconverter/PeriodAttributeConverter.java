@@ -1,4 +1,4 @@
-package de.bund.bva.isyfact.persistence.datetime.attributeconverter;
+package de.bund.bva.isyfact.datetime.persistence.attributeconverter;
 
 import java.time.Period;
 import java.util.Objects;
@@ -25,7 +25,6 @@ public class PeriodAttributeConverter implements AttributeConverter<Period, Stri
         if (aString == null) {
             return null;
         }
-
         return Period.parse(aString);
     }
 }

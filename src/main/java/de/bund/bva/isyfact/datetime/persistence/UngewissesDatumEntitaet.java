@@ -1,4 +1,4 @@
-package de.bund.bva.isyfact.persistence.datetime;
+package de.bund.bva.isyfact.datetime.persistence;
 
 import java.io.Serializable;
 import java.time.LocalDate;
