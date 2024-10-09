@@ -1,0 +1,12 @@
+= Konzept Datum & Zeit Persistenz: Einleitung
+
+// tag::inhalt[]
+[[einleitung]]
+== Einleitung
+
+Dieses Dokument beschreibt die konzeptionellen Grundlagen der Persistierung von Datums- und Zeitwerten in der IsyFact.
+
+Die aus diesem Dokument abgeleitete Umsetzung der Verarbeitung von Datums- und Zeitwerten im Rahmen der
+Anwendungsentwicklung ist in den xref:nutzungsvorgaben/master.adoc[Nutzungsvorgaben] beschrieben.
+
+// end::inhalt[]

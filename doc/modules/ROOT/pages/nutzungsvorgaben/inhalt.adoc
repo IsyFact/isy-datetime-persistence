@@ -1,0 +1,10 @@
+= Nutzungsvorgaben Datum & Zeit Persistenz: Inhalt
+
+// tag::inhalt[]
+[[dauern-und-zeitzonen]]
+== Dauern und Zeitzonen
+
+Dieses Kapitel enthält einige grundlegende Informationen zum Umgang Dauern und Zeitzonen.
+
+
+// end::inhalt[]

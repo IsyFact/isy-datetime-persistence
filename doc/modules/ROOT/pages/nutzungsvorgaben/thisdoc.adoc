@@ -1,0 +1,11 @@
+= Nutzungsvorgaben Datum & Zeit Persistenz: Einleitung
+
+// tag::inhalt[]
+[[einleitung]]
+== Einleitung
+
+Im xref:konzept/master.adoc[] werden die Anforderungen und Vorgaben zur Persistierung von Datum und Zeit der IsyFact definiert, um eine einheitliche Umsetzung in der gesamten Anwendungslandschaft zu gewährleisten.
+
+Dieses Dokument beschreibt alle Aspekte, die bei der Entwicklung eines IT-Systems zu berücksichtigen sind, um die definierten Anforderungen zu erfüllen.
+Die IsyFact stellt eine eigene xref:glossary:glossary:master.adoc#glossar-bibliothek[Bibliothek] (`isy-datetime-persistence`) bereit, um die Anforderungen einheitlich umsetzen zu können.
+// end::inhalt[]

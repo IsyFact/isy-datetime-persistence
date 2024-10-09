@@ -1,0 +1,14 @@
+= Konzept Datum & Zeit Persistenz: Inhalt
+
+// tag::inhalt[]
+[[anforderungen]]
+== Anforderungen
+
+Im  Folgenden werden die Anforderungen an die Persistierung von Datums- und Zeitwerten definiert.
+
+[[definitionen]]
+=== Definitionen
+
+Die folgenden Begriffe sind zentral für den Baustein „Datum und Zeit Persistenz“ und werden hier definiert.
+
+// end::inhalt[]
