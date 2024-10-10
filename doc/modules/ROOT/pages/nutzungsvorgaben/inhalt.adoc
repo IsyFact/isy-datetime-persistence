@@ -1,10 +1,14 @@
 = Nutzungsvorgaben Datum & Zeit Persistenz: Inhalt
 
 // tag::inhalt[]
-[[dauern-und-zeitzonen]]
-== Dauern und Zeitzonen
+[[einleitung]]
 
-Dieses Kapitel enthält einige grundlegende Informationen zum Umgang Dauern und Zeitzonen.
+== Einleitung
+
+Dieses Dokument beschreibt in Zukunft die Nutzungsvorgaben der Persistierung von Datums- und Zeitwerten in der IsyFact.
+
+Bis zur endgültigen Ablösung als eigenständiges Modul verweisen wir auf die bestehenden
+xref:4.0.x@isyfact-standards-doku:isy-persistence:konzept.adoc[Seiten der isy-persistence].
 
 
 // end::inhalt[]
