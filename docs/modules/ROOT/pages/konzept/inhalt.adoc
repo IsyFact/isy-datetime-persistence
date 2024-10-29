@@ -5,9 +5,6 @@
 
 == Einleitung
 
-Dieses Dokument beschreibt in Zukunft die konzeptionellen Grundlagen der Persistierung von Datums- und Zeitwerten in der IsyFact.
-
-Bis zur endgültigen Ablösung als eigenständiges Modul verweisen wir auf die bestehenden
-xref:4.0.x@isyfact-standards-doku:isy-persistence:konzept.adoc[Seiten der isy-persistence].
+Die Bibliothek `isy-datetime` stellt die Logik zu Verarbeitung unvollständiger Datumsangaben zur Verfügung. Zur Persistierung dieser Datums- und Zeitangaben dient das Paket `isy-datetime-persistence`. Es ergänzt die Klassen aus `isy-datetime` um entsprechende Entitäten, die dem Standard aus `jakarta-persistence` entsprechen. Die Persistierung der Datums-Objekte ist für den Entwickler dabei völlig transparent; die Anwendung wird in den xref:nutzungsvorgaben/master.adoc[Nutzungsvorgaben] beschrieben.
 
 // end::inhalt[]
