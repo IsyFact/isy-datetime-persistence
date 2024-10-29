@@ -5,10 +5,43 @@
 
 == Einleitung
 
-Dieses Dokument beschreibt in Zukunft die Nutzungsvorgaben der Persistierung von Datums- und Zeitwerten in der IsyFact.
+Die Bibliothek `isy-datetime-persistence` dient als Ergänzung der Bibliothek `isy-datetime`. Sie enthält alle Methoden zur Persistierung von Datums-Objekten aus `isy-datetime`.
 
-Bis zur endgültigen Ablösung als eigenständiges Modul verweisen wir auf die bestehenden
-xref:4.0.x@isyfact-standards-doku:isy-persistence:konzept.adoc[Seiten der isy-persistence].
+== Einbinden in das Projekt
 
+Die Bibliothek `isy-datetime-persistence` wird mit folgendem Code-Abschnitt in die POM-Datei des Projekts eingebunden:
+
+[source,xml]
+[[einbindung-datetime-persistence]]
+----
+<dependency>
+    <groupId>de.bund.bva.isyfact</groupId>
+    <artifactId>isy-datetime-persistence</artifactId>
+    <version>${isy-datetime-persistence.version}</version>
+</dependency>
+----
+Der Wert von `isy-datetime-persistence.version`  wird dabei in den Properties der POM-Datei gesetzt.
+
+Durch diese Dependency werden auch `isy-datetime` und `jakarta.persistence` eingebunden.
+
+Dem Entwickler stehen nun einige Entitäten und ein Converter zur Verfügung, mit den Datums-Objekte verarbeitet werden können.
+
+== Die Entitäten
+[[entitaeten]]
+
+Im Paket `de.bund.bva.isyfact.datetime.persistence` befinden sich die Klassen
+
+* `UngewissesDatumEntitaet`
+* `UngewisseZeitEntitaet`
+* `ZeitraumEntitaet`
+
+
+Diese Klassen bilden die Datenbank-Entitäten zu den entsprechenden Klassen aus `isy-datetime` gemäß dem Standard, der in `jakarta.persistence` definiert ist.
+
+== Der AttributeConverter
+[[attributeonverter]]
+
+
+Die Klasse `PeriodAttributeConverter` im Unterpaket `attributeconverter` stellt einen `Converter` zur Konvertierung von Objekten der Klasse `Period` aus `java.time` zur Verfügung. Die Konvertierung erfolgt dabei automatisch; das Speichern erfolgt in der ISO-8601-Darstellung als String.
 
 // end::inhalt[]

@@ -2,4 +2,6 @@
 
 // tag::inhalt[]
 
+Mit Hilfe des Pakets `isy-datetime-persistence` der Isyfact können Datums-Objekte des Pakets `isy-datetime` in Datenbanken abgelegt und wieder ausgelesen werden.
+
 // end::inhalt[]

@@ -2,7 +2,7 @@
 
 // tag::inhalt[]
 
-
+Mit dem Baustein `isy-datetime` stellt die Isyfact eine  Bibliothek zur Behandlung von Datums- und Zeitangaben zur Verfügung, welche im Gegensatz zu den Standardklassen von Java auch teilweise unbestimmte Datumsangaben (etwa fehlende Angabe des Tages) zulässt.
 
 
 
