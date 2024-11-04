@@ -14,9 +14,6 @@ on:
       - .github/**
       - src/**
       - pom.xml
-  pull_request:
-    branches:
-      - develop
   workflow_dispatch:
 jobs:
   Version:
