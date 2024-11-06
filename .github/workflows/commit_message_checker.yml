@@ -1,0 +1,14 @@
+name: Commit Message Checker
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - release/**
+      - hotfix/**
+      - feature/**
+      - bugfix/**
+
+jobs:
+  CommitMessageChecker:
+    uses: IsyFact/isy-github-actions-templates/.github/workflows/commit_message_checker_template.yml@v1.6.0
