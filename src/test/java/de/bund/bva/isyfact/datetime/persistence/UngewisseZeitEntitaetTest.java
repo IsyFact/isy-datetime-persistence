@@ -1,31 +1,32 @@
 package de.bund.bva.isyfact.datetime.persistence;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.time.LocalTime;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import de.bund.bva.isyfact.datetime.core.UngewisseZeit;
 
 public class UngewisseZeitEntitaetTest {
-    private static LocalTime ANFANG = LocalTime.of(12, 0);
-    private static LocalTime ENDE = LocalTime.of(18, 30);
+
+    private static final LocalTime ANFANG = LocalTime.of(12, 0);
+    private static final LocalTime ENDE = LocalTime.of(18, 30);
+
     @Test
-    public void toUngewisseZeit() {
+    void toUngewisseZeit() {
         UngewisseZeitEntitaet entitaet = new UngewisseZeitEntitaet();
         entitaet.setAnfang(ANFANG);
         entitaet.setEnde(ENDE);
 
         UngewisseZeit ungewisseZeit = entitaet.toUngewisseZeit();
 
-        assertEquals(ANFANG, ungewisseZeit.getAnfang());
-        assertEquals(ENDE, ungewisseZeit.getEnde());
+        assertThat(ungewisseZeit.getAnfang()).isEqualTo(ANFANG);
+        assertThat(ungewisseZeit.getEnde()).isEqualTo(ENDE);
     }
 
     @Test
-    public void testEqualsAndHashCodeWithEqualObjects() {
+    void testEqualsAndHashCodeWithEqualObjects() {
         UngewisseZeitEntitaet entity1 = new UngewisseZeitEntitaet();
         entity1.setAnfang(ANFANG);
         entity1.setEnde(ENDE);
@@ -34,18 +35,16 @@ public class UngewisseZeitEntitaetTest {
         entity2.setAnfang(ANFANG);
         entity2.setEnde(ENDE);
 
-        assertEquals(entity1, entity2);
-        // Wenn Referenzen identisch sind, wird restliche Logik von equals übersprungen
-        assertEquals(entity1, entity1);
+        assertThat(entity1)
+            .isNotNull()
+            .isNotEqualTo("test")
+            .isEqualTo(entity2);
 
-        assertNotEquals(entity1, null);
-        assertNotEquals(entity1, "test");
-
-        assertEquals(entity1.hashCode(), entity2.hashCode());
+        assertThat(entity1.hashCode()).isEqualTo(entity2.hashCode());
     }
 
     @Test
-    public void testEqualsWithDifferentObjects() {
+    void testEqualsWithDifferentObjects() {
         LocalTime anfang1 = LocalTime.of(12, 0);
         LocalTime ende1 = LocalTime.of(15, 0);
 
@@ -60,11 +59,11 @@ public class UngewisseZeitEntitaetTest {
         entity2.setAnfang(anfang2);
         entity2.setEnde(ende2);
 
-        assertNotEquals(entity1, entity2);
+        assertThat(entity1).isNotEqualTo(entity2);
     }
 
     @Test
-    public void testHashCodeWithDifferentObjects() {
+    void testHashCodeWithDifferentObjects() {
         LocalTime anfang2 = LocalTime.of(13, 0);
         LocalTime ende2 = LocalTime.of(16, 0);
 
@@ -76,6 +75,6 @@ public class UngewisseZeitEntitaetTest {
         entity2.setAnfang(anfang2);
         entity2.setEnde(ende2);
 
-        assertNotEquals(entity1.hashCode(), entity2.hashCode());
+        assertThat(entity1.hashCode()).isNotEqualTo(entity2.hashCode());
     }
 }

@@ -1,20 +1,20 @@
 package de.bund.bva.isyfact.datetime.persistence;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import java.time.LocalDate;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import de.bund.bva.isyfact.datetime.core.UngewissesDatum;
 
 public class UngewissesDatumEntitaetTest {
 
-    private static LocalDate ANFANG = LocalDate.of(2017, 1, 1);
-    private static LocalDate ENDE = LocalDate.of(2017, 1, 10);
+    private static final LocalDate ANFANG = LocalDate.of(2017, 1, 1);
+    private static final LocalDate ENDE = LocalDate.of(2017, 1, 10);
     @Test
-    public void toUngewissesDatum() {
+    void toUngewissesDatum() {
         UngewissesDatumEntitaet entitaet = new UngewissesDatumEntitaet();
 
         entitaet.setAnfang(ANFANG);
@@ -22,12 +22,12 @@ public class UngewissesDatumEntitaetTest {
 
         UngewissesDatum ungewissesDatum = entitaet.toUngewissesDatum();
 
-        assertEquals(ANFANG, ungewissesDatum.getAnfang());
-        assertEquals(ENDE, ungewissesDatum.getEnde());
+        assertThat(ungewissesDatum.getAnfang()).isEqualTo(ANFANG);
+        assertThat(ungewissesDatum.getEnde()).isEqualTo(ENDE);
     }
 
     @Test
-    public void testEqualsAndHashCodeWithEqualObjects() {
+    void testEqualsAndHashCodeWithEqualObjects() {
         UngewissesDatumEntitaet entity1 = new UngewissesDatumEntitaet();
         entity1.setAnfang(ANFANG);
         entity1.setEnde(ENDE);
@@ -36,18 +36,16 @@ public class UngewissesDatumEntitaetTest {
         entity2.setAnfang(ANFANG);
         entity2.setEnde(ENDE);
 
-        assertEquals(entity1, entity2);
-        // Wenn Referenzen identisch sind, wird restliche Logik von equals übersprungen
-        assertEquals(entity1, entity1);
+        assertThat(entity1)
+            .isNotNull()
+            .isNotEqualTo("test")
+            .isEqualTo(entity2);
 
-        assertNotEquals(entity1, null);
-        assertNotEquals(entity1, "test");
-
-        assertEquals(entity1.hashCode(), entity2.hashCode());
+        assertThat(entity1.hashCode()).isEqualTo(entity2.hashCode());
     }
 
     @Test
-    public void testEqualsWithDifferentObjects() {
+    void testEqualsWithDifferentObjects() {
         LocalDate anfang2 = LocalDate.of(2017, 1, 5);
         LocalDate ende2 = LocalDate.of(2017, 1, 15);
 
@@ -64,7 +62,7 @@ public class UngewissesDatumEntitaetTest {
     }
 
     @Test
-    public void testHashCodeWithDifferentObjects() {
+    void testHashCodeWithDifferentObjects() {
         LocalDate anfang2 = LocalDate.of(2017, 1, 5);
         LocalDate ende2 = LocalDate.of(2017, 1, 15);
 
