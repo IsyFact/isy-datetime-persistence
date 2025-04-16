@@ -50,10 +50,9 @@ public class UngewisseZeitEntitaet implements Serializable {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof UngewisseZeitEntitaet)) {
+        if (!(o instanceof UngewisseZeitEntitaet that)) {
             return false;
         }
-        UngewisseZeitEntitaet that = (UngewisseZeitEntitaet) o;
         return Objects.equals(anfang, that.anfang) &&
                 Objects.equals(ende, that.ende);
     }

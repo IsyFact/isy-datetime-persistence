@@ -71,10 +71,9 @@ public class ZeitraumEntitaet {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof ZeitraumEntitaet)) {
+        if (!(o instanceof ZeitraumEntitaet zeitraumEntitaet)) {
             return false;
         }
-        ZeitraumEntitaet zeitraumEntitaet = (ZeitraumEntitaet) o;
         return id == zeitraumEntitaet.id && ohneDatum == zeitraumEntitaet.ohneDatum && Objects
             .equals(anfang, zeitraumEntitaet.anfang) && Objects.equals(ende, zeitraumEntitaet.ende);
     }
