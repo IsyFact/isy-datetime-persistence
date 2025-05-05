@@ -1,29 +1,27 @@
 package de.bund.bva.isyfact.datetime.persistence;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import de.bund.bva.isyfact.datetime.core.Zeitraum;
 
 public class ZeitraumEntitaetTest {
-    private static ZonedDateTime ZONEDDATETIME = ZonedDateTime.of(
+    private static final ZonedDateTime ZONEDDATETIME = ZonedDateTime.of(
             LocalDateTime.of(2017, 8, 1, 15, 0), ZoneId.systemDefault()
     );
 
-    private static ZonedDateTime ANFANG = ZONEDDATETIME;
-    private static ZonedDateTime ENDE = ZONEDDATETIME.plusHours(12);
+    private static final ZonedDateTime ANFANG = ZONEDDATETIME;
+    private static final ZonedDateTime ENDE = ZONEDDATETIME.plusHours(12);
 
     @Test
-    public void toZeitraum() {
+    void toZeitraum() {
         ZeitraumEntitaet entitaet = new ZeitraumEntitaet();
         entitaet.setAnfang(ANFANG);
         entitaet.setEnde(ENDE);
@@ -31,42 +29,40 @@ public class ZeitraumEntitaetTest {
 
         Zeitraum zeitraum = entitaet.toZeitraum();
 
-        assertEquals(ANFANG, zeitraum.getAnfangsdatumzeit());
-        assertEquals(ENDE, zeitraum.getEndedatumzeit());
+        assertThat(zeitraum.getAnfangsdatumzeit()).isEqualTo(ANFANG);
+        assertThat(zeitraum.getEndedatumzeit()).isEqualTo(ENDE);
         assertFalse(entitaet.isOhneDatum());
 
         entitaet.setOhneDatum(true);
 
         zeitraum = entitaet.toZeitraum();
 
-        assertNull(zeitraum.getAnfangsdatumzeit());
-        assertNull(zeitraum.getEndedatumzeit());
-        assertEquals(ANFANG.toLocalTime(), zeitraum.getAnfangszeit());
-        assertEquals(ENDE.toLocalTime(), zeitraum.getEndzeit());
+        assertThat(zeitraum.getAnfangsdatumzeit()).isNull();
+        assertThat(zeitraum.getEndedatumzeit()).isNull();
+        assertThat(zeitraum.getAnfangszeit()).isEqualTo(ANFANG.toLocalTime());
+        assertThat(zeitraum.getEndzeit()).isEqualTo(ENDE.toLocalTime());
         assertTrue(zeitraum.isOhneDatum());
     }
 
     @Test
-    public void testEqualsAndHashCodeWithEqualObjects() {
+    void testEqualsAndHashCodeWithEqualObjects() {
         ZeitraumEntitaet entity1 = new ZeitraumEntitaet(ANFANG, ENDE, true);
         entity1.setId(1L);
-        assertEquals(1L, entity1.getId());
+        assertThat(entity1.getId()).isEqualTo(1L);
 
         ZeitraumEntitaet entity2 = new ZeitraumEntitaet(ANFANG, ENDE, true);
         entity2.setId(1L);
 
-        assertEquals(entity1, entity2);
-        // Wenn Referenzen identisch sind, wird restliche Logik von equals übersprungen
-        assertEquals(entity1, entity1);
+        assertThat(entity1)
+            .isNotNull()
+            .isNotEqualTo("test")
+            .isEqualTo(entity2);
 
-        assertNotEquals(entity1, null);
-        assertNotEquals(entity1, "test");
-
-        assertEquals(entity1.hashCode(), entity2.hashCode());
+        assertThat(entity1.hashCode()).isEqualTo(entity2.hashCode());
     }
 
     @Test
-    public void testEqualsWithDifferentObjects() {
+    void testEqualsWithDifferentObjects() {
         ZonedDateTime anfang1 = ZonedDateTime.parse("2023-11-03T12:00:00Z");
         ZonedDateTime ende1 = ZonedDateTime.parse("2023-11-03T15:00:00Z");
 
@@ -80,11 +76,11 @@ public class ZeitraumEntitaetTest {
         entity2.setId(2L);
 
         // Test der equals-Methode
-        assertNotEquals(entity1, entity2);
+        assertThat(entity1).isNotEqualTo(entity2);
     }
 
     @Test
-    public void testHashCodeWithDifferentObjects() {
+    void testHashCodeWithDifferentObjects() {
         ZonedDateTime anfang2 = ZonedDateTime.parse("2023-11-03T13:00:00Z");
         ZonedDateTime ende2 = ZonedDateTime.parse("2023-11-03T16:00:00Z");
 
@@ -94,11 +90,11 @@ public class ZeitraumEntitaetTest {
         ZeitraumEntitaet entity2 = new ZeitraumEntitaet(anfang2, ende2, true);
         entity2.setId(2L);
 
-        assertNotEquals(entity1.hashCode(), entity2.hashCode());
+        assertThat(entity1.hashCode()).isNotEqualTo(entity2.hashCode());
     }
 
     @Test
-    public void testEqualsZeitraum() {
+    void testEqualsZeitraum() {
         ZeitraumEntitaet entity = new ZeitraumEntitaet(ANFANG, ENDE, false);
 
         Zeitraum zeitraum1 = Zeitraum.of(ANFANG, ENDE);
@@ -112,7 +108,7 @@ public class ZeitraumEntitaetTest {
     }
 
     @Test
-    public void testEqualsZeitraumWithEqualZeitraum() {
+    void testEqualsZeitraumWithEqualZeitraum() {
         boolean ohneDatum = false;
 
         ZeitraumEntitaet entity = new ZeitraumEntitaet(ANFANG, ENDE, ohneDatum);
@@ -124,7 +120,7 @@ public class ZeitraumEntitaetTest {
     }
 
     @Test
-    public void testEqualsZeitraumWithEqualZeitraumAndOhneDatum() {
+    void testEqualsZeitraumWithEqualZeitraumAndOhneDatum() {
         boolean ohneDatum = true;
 
         ZeitraumEntitaet entity = new ZeitraumEntitaet(ANFANG, ENDE, ohneDatum);
@@ -136,7 +132,7 @@ public class ZeitraumEntitaetTest {
     }
 
     @Test
-    public void testEqualsZeitraumWithEqualZeitraumAndWithDatum() {
+    void testEqualsZeitraumWithEqualZeitraumAndWithDatum() {
         boolean ohneDatum = false;
 
         ZeitraumEntitaet entity = new ZeitraumEntitaet(ANFANG, ENDE, ohneDatum);
@@ -148,7 +144,7 @@ public class ZeitraumEntitaetTest {
     }
 
     @Test
-    public void testEqualsZeitraumWithDifferentZeitraum() {
+    void testEqualsZeitraumWithDifferentZeitraum() {
         boolean ohneDatum1 = true;
 
         ZonedDateTime anfang2 = ZonedDateTime.of(2023, 1, 1, 11, 0, 0, 0, ZoneId.systemDefault());
