@@ -1,18 +1,15 @@
-= Nutzungsvorgaben Datum & Zeit Persistenz: Inhalt
+= Nutzungsvorgaben Datum & Zeit Persistenz
 
-// tag::inhalt[]
-[[einleitung]]
+include::partial$library.adoc[]
 
-== Einleitung
-
-Die Bibliothek `isy-datetime-persistence` dient als Ergänzung der Bibliothek `isy-datetime`. Sie enthält alle Methoden zur Persistierung von Datums-Objekten aus `isy-datetime`.
+Die Bibliothek `isy-datetime-persistence` dient als Ergänzung der Bibliothek `isy-datetime`. Mit ihr können Datums-Objekte des Pakets `isy-datetime` in Datenbanken abgelegt und wieder ausgelesen werden.
 
 == Einbinden in das Projekt
 
 Die Bibliothek `isy-datetime-persistence` wird mit folgendem Code-Abschnitt in die POM-Datei des Projekts eingebunden:
 
-[source,xml]
 [[einbindung-datetime-persistence]]
+[source,xml]
 ----
 <dependency>
     <groupId>de.bund.bva.isyfact</groupId>
@@ -26,22 +23,20 @@ Durch diese Dependency werden auch `isy-datetime` und `jakarta.persistence` eing
 
 Dem Entwickler stehen nun einige Entitäten und ein Converter zur Verfügung, mit den Datums-Objekte verarbeitet werden können.
 
-== Die Entitäten
 [[entitaeten]]
+== Entitäten
 
-Im Paket `de.bund.bva.isyfact.datetime.persistence` befinden sich die Klassen
+Im Paket `de.bund.bva.isyfact.datetime.persistence` befinden sich die Klassen:
 
-* `UngewissesDatumEntitaet`
-* `UngewisseZeitEntitaet`
-* `ZeitraumEntitaet`
-
+* `UngewissesDatumEntitaet`,
+* `UngewisseZeitEntitaet`,
+* `ZeitraumEntitaet`.
 
 Diese Klassen bilden die Datenbank-Entitäten zu den entsprechenden Klassen aus `isy-datetime` gemäß dem Standard, der in `jakarta.persistence` definiert ist.
 
-== Der AttributeConverter
-[[attributeonverter]]
+[[attribute-converter]]
+== Attribute Converter
 
-
-Die Klasse `PeriodAttributeConverter` im Unterpaket `attributeconverter` stellt einen `Converter` zur Konvertierung von Objekten der Klasse `Period` aus `java.time` zur Verfügung. Die Konvertierung erfolgt dabei automatisch; das Speichern erfolgt in der ISO-8601-Darstellung als String.
-
-// end::inhalt[]
+Die Klasse `PeriodAttributeConverter` im Unterpaket `attributeconverter` stellt einen `Converter` zur Konvertierung von Objekten der Klasse `Period` aus `java.time` zur Verfügung.
+Die Konvertierung erfolgt dabei automatisch.
+Das Speichern erfolgt in der ISO-8601-Darstellung als String.
