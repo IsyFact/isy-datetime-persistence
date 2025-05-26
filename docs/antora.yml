@@ -1,5 +1,6 @@
 name: datetime-persistence
 title: Baustein Datum & Zeit (Persistenz)
+prerelease: '(DEV)'
 start_page: ROOT:konzept.adoc
 nav:
 - modules/ROOT/nav.adoc
