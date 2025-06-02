@@ -1,0 +1,10 @@
+= Konzept Datum & Zeit Persistenz
+
+include::partial$library.adoc[]
+
+Mit dem Baustein `isy-datetime` stellt die Isyfact eine  Bibliothek zur Behandlung von Datums- und Zeitangaben zur Verfügung, welche im Gegensatz zu den Standardklassen von Java auch teilweise unbestimmte Datumsangaben (etwa fehlende Angabe des Tages) zulässt.
+
+[[einleitung]]
+== Einleitung
+
+Die Bibliothek `isy-datetime` stellt die Logik zu Verarbeitung unvollständiger Datumsangaben zur Verfügung. Zur Persistierung dieser Datums- und Zeitangaben dient das Paket `isy-datetime-persistence`. Es ergänzt die Klassen aus `isy-datetime` um entsprechende Entitäten, die dem Standard aus `jakarta-persistence` entsprechen. Die Persistierung der Datums-Objekte ist für den Entwickler dabei völlig transparent; die Anwendung wird in den xref:nutzungsvorgaben.adoc[Nutzungsvorgaben] beschrieben.

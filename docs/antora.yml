@@ -1,7 +1,6 @@
-name: isy-datetime-persistence-doc
-title: isy-datetime-persistence
-version: '4.0.0 SNAPSHOT'
-display_version: '4.0.0 SNAPSHOT'
-start_page: ROOT:konzept/master.adoc
+name: datetime-persistence
+title: Baustein Datum & Zeit (Persistenz)
+prerelease: '(DEV)'
+start_page: ROOT:konzept.adoc
 nav:
 - modules/ROOT/nav.adoc
