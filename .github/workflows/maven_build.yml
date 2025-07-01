@@ -36,8 +36,8 @@ jobs:
     with:
       version: ${{ needs.Version.outputs.next-version }}
       jdk-version: 21
-      maven-opts: '-DaltDeploymentRepository=ossrh::default::https://central.sonatype.org/content/repositories/snapshots/'
-      deploy-server-id: ossrh
+      maven-opts: '-PcentralSnapshot'
+      deploy-server-id: central
       sbom: ${{ startsWith(github.ref, 'refs/heads/release/') }}
       sign: true
       environment: 'Release'
