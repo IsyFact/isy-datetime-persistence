@@ -3,5 +3,5 @@
 [cols="5m,2,3",options="header"]
 |====
 |Name |Art |Version
-|isy-datetime-persistence |Bibliothek |v{page-component-version}
+|isy-datetime-persistence |Bibliothek | {page-component-version}
 |====

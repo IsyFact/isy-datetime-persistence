@@ -426,7 +426,6 @@
                 </plugins>
             </build>
         </profile>
-
         <profile>
             <id>GPGsigning</id>
             <build>
