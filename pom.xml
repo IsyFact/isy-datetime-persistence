@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.bund.bva.isyfact</groupId>
@@ -13,13 +12,13 @@
         IsyFact: isy-datetime-persistence stellt Funktionen zur Speicherung von Objekten aus isy-datetime bereit.
     </description>
     <url>http://isyfact.de</url>
-
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0</url>
         </license>
     </licenses>
+
     <developers>
         <developer>
             <name>IsyFact-Team</name>
@@ -28,6 +27,7 @@
             <organizationUrl>https://www.bva.bund.de</organizationUrl>
         </developer>
     </developers>
+
     <scm>
         <connection>scm:git:git://github.com/IsyFact/isy-datetime-persistence.git</connection>
         <developerConnection>scm:git:ssh://github.com:IsyFact/isy-datetime-persistence.git</developerConnection>
@@ -76,7 +76,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <dependencies>
         <dependency>
             <groupId>de.bund.bva.isyfact</groupId>
@@ -360,7 +359,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -515,5 +513,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>
