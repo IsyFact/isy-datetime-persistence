@@ -55,7 +55,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <spring.boot.version>3.4.5</spring.boot.version>
+        <spring.boot.version>3.5.5</spring.boot.version>
 
         <isy-datetime.version>3.0.1</isy-datetime.version>
         <isy-checkstyle-config.version>0.2.0</isy-checkstyle-config.version>
